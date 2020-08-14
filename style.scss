@@ -37,6 +37,14 @@ html{
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     font-size: 62.5%;
+
+    @media (max-width: 800px){
+        font-size: 55%;
+    }
+
+    @media (max-width: 500px){
+        font-size: 50%;
+    }
 }
 
 .header{
@@ -136,10 +144,14 @@ html{
         }
     
         &__btn{
-            width: 10%;
+            min-width: 10%;
             background-color: var(--main);
             border: 2px solid var(--main);
             position: relative;
+
+            @media (max-width: 800px){
+                min-width: 20%;
+            }
 
             &::before{
                 position: absolute;
