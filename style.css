@@ -1,1 +1,24 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+:root {
+  --main: #5FEC71;
+  --secondary: #F14D4D;
+  --light-gray: #b8b8b8;
+  --dark-gray: #5d5d5d;
+  --container-max-width: 160rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 62.5%;
+}
+/*# sourceMappingURL=style.css.map */
