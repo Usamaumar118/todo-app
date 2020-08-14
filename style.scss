@@ -6,6 +6,8 @@
     --gray-bg: #EBEBEB;
 
     --container-max-width: 160rem;
+    --small-container-max-width: 80rem;
+
 
 
 }
@@ -22,6 +24,13 @@ input{
     font-family: inherit;
     box-sizing: inherit;
     outline: none;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: var(--dark-gray);
 }
 
 html{
@@ -130,8 +139,107 @@ html{
             width: 10%;
             background-color: var(--main);
             border: 2px solid var(--main);
+            position: relative;
 
+            &::before{
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(90deg);
+                width: 2.5rem;
+                height: 4px;
+                background-color: #fff;
+            }
+
+            &::after{
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) ;
+                width: 2.5rem;
+                height: 4px;
+                background-color: #fff;
+            }
         }
     }
 
+}
+
+.todo{
+
+    padding: 8rem 0;
+
+    &__list{
+        // border: 1px solid var(--light-gray);
+
+        width: 95%;
+        max-width: 100rem;
+        margin: 0 auto;
+
+    
+        &__item{
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+
+            transition: transform .2s ease-in,
+                        box-shadow .3s ease-in;
+            
+
+
+            &__text{
+                font-size: 1.8rem;
+                border: 1px solid var(--light-gray);
+                border-right: none;
+                width: 100%;
+                padding-left: 2rem;
+                display: flex;
+                align-items: center;
+
+
+                
+
+            }
+
+            &__btn{
+                background-color: var(--secondary);
+                border: 1px solid var(--secondary);
+                padding: 2.5rem;
+                position: relative;
+
+
+                &::before{
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(45deg);
+                    width: 2.5rem;
+                    height: 4px;
+                    background-color: #fff;
+                }
+
+                &::after{
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                    width: 2.5rem;
+                    height: 4px;
+                    background-color: #fff;
+                }
+            }
+
+            &:hover,
+            &:active{
+                transform: translateY(-3px);
+                box-shadow: 0 .5rem 1rem #ddd;
+
+            }
+        }
+    }
 }
