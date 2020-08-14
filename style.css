@@ -21,4 +21,12 @@ html {
   font-family: 'Poppins', sans-serif;
   font-size: 62.5%;
 }
+
+.header {
+  border: 1px solid red;
+  width: 95%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
 /*# sourceMappingURL=style.css.map */
