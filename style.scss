@@ -33,3 +33,59 @@ html{
     padding: 2rem 0;
 
 }
+
+
+.logo{
+
+    display: flex;
+    align-items: center;
+
+    &__img{
+        width: 5rem;
+        height: 5rem;
+
+        border: 5px solid;
+        border-radius: 100%;
+        border-top-color: transparent;
+        transform: rotate(45deg);
+        position: relative;
+        margin-right: 1rem;
+    
+        &__tick{
+            height: 100%;
+            transform: rotate(-90deg);
+            position: relative;
+    
+            &::after{
+                bottom: 35%;
+                left: 25%;
+                content: '';
+                height: 6px;
+                width: 100%;
+                background-color: var(--main);
+                position: absolute;
+            }
+    
+    
+            &::before{
+                position: absolute;
+                bottom: 35%;
+                left: 25%;
+                content: '';
+                height: 40%;
+                width: 6px;
+                background-color: var(--main);
+            }
+        }
+    
+    }
+
+    &__text{
+        font-family: 'Bebas Neue', cursive;
+        font-size: 2.4rem;
+        color: black;
+        letter-spacing: 1px;
+    }
+
+
+}

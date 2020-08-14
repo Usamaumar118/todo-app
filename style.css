@@ -29,4 +29,59 @@ html {
   margin: 0 auto;
   padding: 2rem 0;
 }
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo__img {
+  width: 5rem;
+  height: 5rem;
+  border: 5px solid;
+  border-radius: 100%;
+  border-top-color: transparent;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: relative;
+  margin-right: 1rem;
+}
+
+.logo__img__tick {
+  height: 100%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  position: relative;
+}
+
+.logo__img__tick::after {
+  bottom: 35%;
+  left: 25%;
+  content: '';
+  height: 6px;
+  width: 100%;
+  background-color: var(--main);
+  position: absolute;
+}
+
+.logo__img__tick::before {
+  position: absolute;
+  bottom: 35%;
+  left: 25%;
+  content: '';
+  height: 40%;
+  width: 6px;
+  background-color: var(--main);
+}
+
+.logo__text {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.4rem;
+  color: black;
+  letter-spacing: 1px;
+}
 /*# sourceMappingURL=style.css.map */
