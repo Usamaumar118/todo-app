@@ -19,7 +19,7 @@ function addListItem(e){
 
     let todoItem = `<li class="todo__list__item">
     <p class="todo__list__item__text">${inputValue}</p>
-    <a class="todo__list__item__btn" href="#"></a>
+    <a class="todo__list__item__btn" onclick="deleteItem(event)" href="#"></a>
     </li>`
 
     todoList.insertAdjacentHTML('afterbegin', todoItem)
@@ -27,7 +27,11 @@ function addListItem(e){
     addInput.value = ''
     addInput.focus()
 
-
     }
 
+}
+
+function deleteItem(event) {
+    event.preventDefault()
+    event.target.parentElement.remove()
 }
