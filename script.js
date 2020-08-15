@@ -1,10 +1,11 @@
 const addInput = document.querySelector('.add-item__form__input')
 const addBtn  = document.querySelector('.add-item__form__btn')
 
+const form = document.querySelector('.add-item__form')
 const todoList = document.querySelector('.todo__list')
 
 addBtn.addEventListener('click', addListItem)
-addBtn.addEventListener('keydown', addListItem)
+form.addEventListener('submit', addListItem)
 
 
 
