@@ -4,6 +4,7 @@
   --light-gray: #b8b8b8;
   --dark-gray: #5d5d5d;
   --gray-bg: #EBEBEB;
+  --overlay-color: #5fec7254;
   --container-max-width: 160rem;
   --small-container-max-width: 80rem;
 }
@@ -30,6 +31,7 @@ ul {
 
 a {
   text-decoration: none;
+  display: inline-block;
   color: var(--dark-gray);
 }
 
@@ -119,6 +121,22 @@ html {
   background-color: var(--gray-bg);
   -webkit-box-shadow: 0 1rem 15px #ddd;
           box-shadow: 0 1rem 15px #ddd;
+}
+
+.add-item::after {
+  content: '';
+  position: absolute;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .3s ease-in;
+  transition: opacity .3s ease-in;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--overlay-color);
 }
 
 .add-item__form {
@@ -264,6 +282,65 @@ html {
           transform: translateY(-3px);
   -webkit-box-shadow: 0 .5rem 1rem #ddd;
           box-shadow: 0 .5rem 1rem #ddd;
+}
+
+.confirmation {
+  background-color: var(--gray-bg);
+  padding: 8rem 4rem;
+  width: 40vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 11111;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .confirmation {
+    width: 30vw;
+    padding: 8rem 4rem;
+  }
+}
+
+.confirmation__text {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--dark-gray);
+  margin-bottom: 4rem;
+}
+
+.confirmation__btns-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.confirmation__btn {
+  background-color: red;
+  width: 47.5%;
+  padding: 1.2rem;
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.confirmation__btn--cancel {
+  background-color: var(--main);
+}
+
+.confirmation__btn--del {
+  background-color: var(--secondary);
+}
+
+.confirmation__visible,
+.overlay::after {
+  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .info-text {

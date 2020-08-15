@@ -20,14 +20,25 @@
 
     </header>
 
-    <section class="add-item">
+    <section class="add-item overlay">
 
         <form action="#" class="add-item__form">
             <input class="add-item__form__input" type="text" placeholder="Type something..." name="add-item" id="add-item">
             <a class="add-item__form__btn" href="#"></a>
         </form>
 
-        <p class="info-text">this is the </p>
+        <p class="info-text"></p>
+
+        <div class="confirmation confirmation__visible">
+
+            <p class="confirmation__text">Are You Sure To Delete</p>
+
+            <div class="confirmation__btns-container">
+                <a href="#" id="cancel" class="confirmation__btn confirmation__btn--cancel">Cancel</a>
+                <a href="#" id="del" class="confirmation__btn confirmation__btn--delete">Delete</a>    
+            </div>
+
+        </div>
 
     </section>
 

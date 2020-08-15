@@ -5,6 +5,9 @@
     --dark-gray: #5d5d5d;
     --gray-bg: #EBEBEB;
 
+    --overlay-color: #5fec7254;
+
+
     --container-max-width: 160rem;
     --small-container-max-width: 80rem;
 
@@ -30,6 +33,7 @@ ul{
 }
 a{
     text-decoration: none;
+    display: inline-block;
     color: var(--dark-gray);
 }
 
@@ -116,6 +120,24 @@ html{
     background-color: var(--gray-bg);
     box-shadow: 0 1rem 15px #ddd;
 
+        //Overlay of confirmation modal
+        &::after{
+            content: '';
+            position: absolute;
+    
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+    
+            transition: opacity .3s ease-in;
+    
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--overlay-color);
+        }
 
     &__form{
         width: 95%;
@@ -181,10 +203,10 @@ html{
 
 .todo{
 
+
     padding: 8rem 0;
 
     &__list{
-        // border: 1px solid var(--light-gray);
 
         width: 95%;
         max-width: 100rem;
@@ -257,6 +279,72 @@ html{
         }
     }
 }
+
+
+.confirmation{
+
+    background-color: var(--gray-bg);
+    padding: 8rem 4rem;
+
+    @media (min-width: 1200px){
+        width: 30vw;
+        padding: 8rem 4rem;
+
+    }
+    width: 40vw;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11111;
+
+    text-align: center;
+
+    &__text{
+        font-size: 2rem;
+        font-weight: 400;;
+        color:var(--dark-gray);
+        margin-bottom: 4rem;
+    }
+
+    &__btns-container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__btn{
+        background-color: red;
+        width: 47.5%;
+        padding: 1.2rem ;
+        color: #fff;
+        font-size: 1.6rem;
+
+        &--cancel{
+            background-color: var(--main);
+        }
+
+        &--del{
+            background-color: var(--secondary);
+        }
+
+
+    }
+
+
+
+}
+
+
+
+
+.confirmation__visible,
+.overlay::after{
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
 
 
 .info-text{
