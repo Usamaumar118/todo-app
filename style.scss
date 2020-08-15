@@ -193,6 +193,7 @@ html{
     
         &__item{
             display: flex;
+            max-width: 100%;
             align-items: stretch;
             justify-content: space-between;
             margin-bottom: 2rem;
@@ -204,10 +205,11 @@ html{
 
             &__text{
                 font-size: 1.8rem;
+                line-height: 1.5;
                 border: 1px solid var(--light-gray);
                 border-right: none;
                 width: 100%;
-                padding-left: 2rem;
+                padding: .5rem .5rem .5rem 2rem;
                 display: flex;
                 align-items: center;
 
