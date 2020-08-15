@@ -43,7 +43,15 @@ function addListItem(e){
 
 }
 
+let confirmBox = document.querySelector('.confirmation')
+let overlayDiv = document.querySelector('.add-item')
+
+
 function deleteItem(event) {
     event.preventDefault()
+
+    confirmBox.classList.add('confirmation__visible')
+    overlayDiv.classList.add('overlay')
+
     event.target.parentElement.remove()
 }
