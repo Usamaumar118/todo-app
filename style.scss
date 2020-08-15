@@ -255,3 +255,38 @@ html{
         }
     }
 }
+
+
+.info-text{
+    position: absolute;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    bottom: -5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.6rem;
+    padding: .8rem 2rem;
+    color: #fff;
+    background-color: var(--main);
+
+    animation-name: info;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+    &__visible{
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+
+}
+
+
+
+@keyframes info {
+    0% {bottom: -5rem}
+    50% {bottom: 2%}
+    100% {bottom: -5rem}
+  }
+

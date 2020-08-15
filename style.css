@@ -263,4 +263,55 @@ html {
   -webkit-box-shadow: 0 .5rem 1rem #ddd;
           box-shadow: 0 .5rem 1rem #ddd;
 }
+
+.info-text {
+  position: absolute;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  bottom: -5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 1.6rem;
+  padding: .8rem 2rem;
+  color: #fff;
+  background-color: var(--main);
+  -webkit-animation-name: info;
+          animation-name: info;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.info-text__visible {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+@-webkit-keyframes info {
+  0% {
+    bottom: -5rem;
+  }
+  50% {
+    bottom: 2%;
+  }
+  100% {
+    bottom: -5rem;
+  }
+}
+
+@keyframes info {
+  0% {
+    bottom: -5rem;
+  }
+  50% {
+    bottom: 2%;
+  }
+  100% {
+    bottom: -5rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
