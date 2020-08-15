@@ -53,5 +53,26 @@ function deleteItem(event) {
     confirmBox.classList.add('confirmation__visible')
     overlayDiv.classList.add('overlay')
 
-    event.target.parentElement.remove()
+    let confirmationBtns = document.querySelectorAll('.confirmation__btn');
+
+
+    confirmationBtns.forEach( e => {
+
+        e.addEventListener("click", (e) => {
+
+            if(e.target.id == "del"){
+                event.target.parentElement.remove()
+                confirmBox.classList.remove('confirmation__visible')
+                overlayDiv.classList.remove('overlay')
+            } else if(e.target.id == "cancel"){
+                confirmBox.classList.remove('confirmation__visible')
+                overlayDiv.classList.remove('overlay')
+            }
+
+        })
+
+    })
+
 }
+
+
