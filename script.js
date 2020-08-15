@@ -11,9 +11,21 @@ form.addEventListener('submit', addListItem)
 
 function addListItem(e){
     e.preventDefault()
-    console.log(e)
 
     let inputValue = addInput.value
+
+    if(inputValue === "" || inputValue === undefined) {
+        
+        let infoText = document.querySelector('.info-text')
+
+        infoText.innerHTML = 'Write some text 😊'
+        infoText.classList.add('info-text__visible')
+
+        setTimeout(() => {infoText.classList.remove('info-text__visible')}, 3000)
+
+    }
+
+
 
     if(inputValue != '' || inputValue == undefined  || e.key == 'Enter'){
 
