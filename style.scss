@@ -291,6 +291,7 @@ html{
         padding: 8rem 4rem;
 
     }
+
     width: 40vw;
 
     position: absolute;
@@ -298,14 +299,29 @@ html{
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 11111;
-
     text-align: center;
+
+
+    
+    @media (max-width: 650px){
+        bottom: 0;
+        left: 0;
+        top: auto;
+        transform: translate(0, 0);
+        width: 100%;
+        padding: 2rem;
+        padding-bottom: 3rem;
+    }
 
     &__text{
         font-size: 2rem;
         font-weight: 400;;
         color:var(--dark-gray);
         margin-bottom: 4rem;
+
+        @media (max-width: 650px){
+            margin-bottom: 2rem;
+        }
     }
 
     &__btns-container{
@@ -330,8 +346,6 @@ html{
 
 
     }
-
-
 
 }
 

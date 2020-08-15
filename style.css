@@ -304,11 +304,30 @@ html {
   }
 }
 
+@media (max-width: 650px) {
+  .confirmation {
+    bottom: 0;
+    left: 0;
+    top: auto;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    width: 100%;
+    padding: 2rem;
+    padding-bottom: 3rem;
+  }
+}
+
 .confirmation__text {
   font-size: 2rem;
   font-weight: 400;
   color: var(--dark-gray);
   margin-bottom: 4rem;
+}
+
+@media (max-width: 650px) {
+  .confirmation__text {
+    margin-bottom: 2rem;
+  }
 }
 
 .confirmation__btns-container {
