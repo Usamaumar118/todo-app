@@ -276,11 +276,27 @@ html {
   background-color: #fff;
 }
 
+.todo__list__item__btn--done {
+  background-color: var(--main);
+  border-color: var(--main);
+  padding: 2.5rem;
+  line-height: 1;
+  color: #fff;
+  letter-spacing: 2px;
+  font-family: 'bebas neue', sans-serif;
+  font-size: 1.8rem;
+}
+
 .todo__list__item:hover, .todo__list__item:active {
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
   -webkit-box-shadow: 0 .5rem 1rem #ddd;
           box-shadow: 0 .5rem 1rem #ddd;
+}
+
+.done {
+  color: var(--secondary);
+  text-decoration: line-through;
 }
 
 .confirmation {
