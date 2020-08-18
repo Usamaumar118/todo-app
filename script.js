@@ -76,3 +76,18 @@ function deleteItem(event) {
 }
 
 
+function doneItem(event){
+    event.preventDefault()
+    let todoText = event.target.previousElementSibling.previousElementSibling
+
+    todoText.classList.toggle('done')
+    event.target.innerHTML = "Undo"
+
+    if (todoText.classList.contains('done')){
+    event.target.innerHTML = "done"
+
+    }
+
+}
+
+
