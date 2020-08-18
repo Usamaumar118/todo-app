@@ -32,7 +32,8 @@ function addListItem(e){
     let todoItem = `<li class="todo__list__item">
     <p class="todo__list__item__text">${inputValue}</p>
     <a class="todo__list__item__btn" onclick="deleteItem(event)" href="#"></a>
-    </li>`
+    <a class="todo__list__item__btn--done" onclick="doneItem(event)" href="#">DONE</a>
+</li>`
 
     todoList.insertAdjacentHTML('afterbegin', todoItem)
 
